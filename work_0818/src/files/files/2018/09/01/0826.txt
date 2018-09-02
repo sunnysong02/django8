@@ -1,0 +1,391 @@
+//=====================================
+// 0804
+//=====================================
+점프투파이썬 (파이썬 복습)
+https://wikidocs.net/book/1
+
+실습자료모음
+https://blog.naver.com/shg955
+
+IDLE --> New File 
+
+파이썬은 한컴퓨터안에 여러 버전을 설치할 수 있음. 
+(설치시, Customize installation, pip도 네모박스 체크해서 설치, install for all users 체크. Add python to environment variables 체크. 설치경로 간단하게 (customize install location))
+
+문법 복습 
+1) // 나머지값 버리는 연산.
+2) 문자열은 더하거나, 곱하는 것만 가능.(몇번 반복할 것인가.)
+
+인덱싱 : 한글자를 가리킬 때 쓰임. a[0]
+슬라이싱 : 여러글자 꺼내올 때 쓰임. a[0:4] #4포함 안됨.
+
+a[-1] #뒤에서부터 문자 추출함. 0과 -0은 같다.
+a[4:0] #이런건 올 수 없음.
+a[1:] #1번부터 끝까지.
+a[:17] #0부터 16번까지 가져와랏.
+**주의 : 크기가 왼쪽이 더 작아야함.
+
+관련 함수 : count, find, index
+
+리스트 : 타 언어의 배열이다.리스트안에 딕셔너리 저장 가능. 다른언어
+
+관련 함수 : append #요소추가., del #요소삭제, sort, index, insert, remove
+
+튜플 : 소괄호 이용! 쉼표 존재 #tu = (1,2,3,4)
+우선순위 : 소괄호이용 ! 쉼표 없음. #tu = (1)
+
+튜플은 값 변경 안됨!!! (추가삭제 포함!), 배열같은 것을 상수화 시키는 것.
+
+리스트, 튜플 : 곱하기 더하기 됨. 
+
+튜플도 값은 꺼낼 수 있음. a, b = (12,14), print(a), print(b) 
+요소 갯수가 서로 맞아야 함. (좌변, 우변)
+
+
+딕셔너리 : 인덱스를 마음대로 지정하는 것. 문자형태 or 숫자형태  (key값은 변하지 않는다. ), 중괄호 사용!
+
+print(dic['name']) key에 해당하는 값 출력됨!
+
+
+x in s, x not in s #값이 있을 때 True, 값이 없을 때 True
+
+for 변수 in 리스트(또는 튜플, 문자열):
+range는 사실 리스트임. 
+
+print(list(range(0,3)))
+
+for i in range(3):
+    print(i)
+
+for i in [0,1,2]:
+    print(i)
+
+
+튜플도 요소 하나씩 꺼내서 변수에 넣어짐. 문자열도 마찬가지, 글자 하나하나 들어감.
+딕셔너리도 가능함. 
+
+함수에 return도 여러개 넣을 수 있지만... 한개만 가능함. return 만나면 함수가 끝나고 값이 반환  되기 때문에.
+
+
+여러 개의 입력값을 받는 함수 만들기 def sum_many(*args): 
+
+def sum_many(**args):  딕셔너리 보낼 수 있음.
+
+
+클래스 : 변수 + 함수정의
+
+cal1 = Calculator()
+cal2 = Calculator()
+
+print(cal1.add(3))
+print(cal1.add(4))
+
+
+클래스를 변수에 담아서. "변수.클래스내 함수명 " 으로 사용할 수 있음.
+
+
+클래스 : 붕어빵 틀 (크기와 모양을 틀로 둠. 실제 먹는 것은 클래스가 아니고, 객체임)
+클래스를 가지고 객체를 만들어 줘야 사용할 수 있게 됨.
+
+각 객체는 독립적임.
+
+클래스명의 첫문자는 대문자여야함!
+변수명은 첫문자를 소문자로! (프로그래머끼리의 약속)
+
+
+클래스 안에 구현된 함수는 다른말로 메서드(Method)라고 부르기도하고, 멤버함수라고 부르기도함. 클래스 안에 변수는 멤버함수라고 부르기도 함.
+
+
+생성자, 클래스 내부에 __init__으로 정의됨. 기능 : a라고 하는 객체를 호출하기 전에 반드시 setData가 필요했음. 그런데 __init__으로 인하여 번거로움이 사라짐.
+
+
+클래스상속 : 클래스를 상속받는 클래스!
+
+
+//=====================================
+// 0805 : 강의자료는 선생님 블로그에 있음..
+//=====================================
+생성자 : 클래스 불릴때 딱 한번 호출됨. 그 후에 더 호출 안됨., 보통 변수를 초기화 하는 기능.
+
+모듈 : 함수나 클래스를 다른 파일에 만들어 놓고 쓸수  있게 하는 것, 또다른 파이썬 파일.. (같은 폴더내에 있어야 함.)
+
+파이썬에서 메인이란, 내가 F5를 누르고 있는 곳임! 
+if __name__ == '__main__':  #메인일때만 실행되게 하는 코드 
+
+다른폴더에 있는 것을 import 하는 방법! import module.s3 #모듈이라는 폴더안의 s3임
+
+
+HTML : 웹페이지 내용 구성
+자바스크립트 ; 웹 페이지 동작
+CSS : 웹 꾸미기
+
+ https://www.w3schools.com/ (web관련 언어 설명 페이지)
+
+HTTP : 웹통신을 하는 하나의 약속임. 
+
+HTML에서 <>안에는 대문자 소문자 구분 없음.
+
+<p></p> : 위 아래에 공백줄을 넣음.
+<br> : 줄바꿈. brank?
+<pre></pre>: pre태그로 작성하면 줄바꿈이 바로 적용됨.
+<h1></h1>
+<h6></h6>
+<b></b> <strong></strong> : 볼드체
+<i></i><em></em> : 이탤릭체
+<code></code> : 코드
+<sub></sub>  : 아래첨자
+<sup></sup> : 위첨자
+<hr> : 수평선
+&lt; : <
+&glt; : >
+&quot; : "
+&amp; : &
+<ol><li></li> <li></li> <li></li</ol>: 번호가 있는 리스트
+<ul> <li></li> <li></li> <li></li> </ul> : 번호가 없는 리스트
+<meta charset="EUC-KR"> : web문서가 어떤 인코딩 방식을 따를 것인가를 지정.
+<a href="#">추가정보</a> : 링크걸기
+<img src="*.jpg" width="10" height="10"> : 이미지 (jpg, png, jpeg, gif만 사용 가능!)
+Ctrl + space를 누르면 사용할 수 있는 옵션들이 뜸.
+<table>
+ <tr rowspan="2"> : 첫번째 행, 상하 병합
+	<td></td> : 첫번째 열
+	<td></td> : 두번재 열
+	<th colspan="2"></th> : 가운데정렬 + 글자굵게, 좌우병합
+</tr>
+</table>
+
+<audio src="#"> : 오디오 삽입, mp3, Wav, Ogg 
+<video src="#"> : 비디오 삽입, mp4, WebM, Ogg 
+<iframe src="inner.html"></iframe> : 웹페이지 안에 또다른 웹페이지를 만들어 주는 것.
+<div></div> : 메일, 카페, 블로그 처럼 메뉴바.. (그룹핑)
+<span></span> : 그룹핑..
+
+<form method="POST" action="input.jsp"><input type="text" name="input"></form> :  input은 항상 form안에 있어야 함
+name은 변수이름이라고 생각하면 됨. name이 없으면 데이터를 꺼내올 수 없음
+GET 방식 : URL 주소뒤에 파라미터를 붙여서 데이터 전달함. 아이디 비번 전달에 사용되면 안됨. 검색창에 들어가는 방식, 길이제한있음.
+POST 방식 : http request 헤더에 포함시켜서 전송하는 방식임. 길이 제한 없으며, 보안이 유지됨.
+
+python --version : 파이선 설치,버전 확인
+pip install django : 장고설치
+
+pydev 실행시키고, django project 생성
+
+//=====================================
+// 0818
+//=====================================
+https가 보완이 더 강화된 것임.
+http (웹 서버랑 웹 클라이언트가 통신하는 방식)
+http 처리 방식 : GET, POST etc..
+
+웹 서버 : 웹클라이언트의 요청을 받아 처리하는 역할 (정적인 역할), 이미 존재하는 데이터만 처리 가능..
+웹 애플리케이션 서버 : 새로운 데이터에 대한 처리를 할 수 있음.(동적인 처리), C, 파이선, 자바로 만들 수 있음. (라이브러리 존재함)
+
+Django 설명. 
+MTV 패턴 기반 언어임. 
+- Model[데이터, 클래스로 구성 됨,DB에 접근함.], 
+- Templeates[사용자에게 보여지는 부분, HTML, Python, CSS, JAVA], 
+- View[데이터 처리 로직, 함수, 클래스(상속을 위함)로 만들어짐])
+
+: 여러 사람이 개발할 때 서로 침범하지 않기 위한 패턴임.
+
+우선 개발 환경 점검!
+1)CMD에서 Python 입력하여. 제대로 깔려 있는지 확인.
+2)Jango 확인. pip(Python 깔면서 딸려온 module) 
+pip install django (설치 요청 명령어)
+
+3)window --> preferences 설정 
+ (1) UTF-8 (General --> workspace)
+ (2) pyDev --> interperters --> python interpreter --> new or Quick auto-config 누르면 라이브러리에 Django가 있는지 확인 후 Apply 누르고 닫기.
+4) file --> new file --> django project -> 인터프리터(디폴트), crete 'src' 선택
+
+
+프로젝트 하위 파일 설명
+settings
+- DEBUG = True //debug 출력.
+- ALLOWED_HOSTS = [] //빈칸이면, 다른 컴퓨터가 접근하는 것을 막음. 만약 Naver.com을 넣어두면, 허용하게 된다...? (마지막 시간에 다시내용 설명 할 것임.)
+
+INSTALLED_APPS //
+TEMPLATES // html 파일의 위치..?
+
+프로젝트 실행
+프로젝트 오른쪽 클릭 --> RUN AS --> PyDev Django 클릭!
+
+http://127.0.0.1:8000/ (127.0.0.1이라는건 자기 자신임..)
+
+http://127.0.0.1:8000/admin 도 들어가보자.
+
+웹서버 끄고 싶을 때, 빨간 네모칸 네모 두개를 누르면 됨. (현재 실행되는 것 다 끄기 ..) 그리고 엑스두개짜리도 마져 누르기..
+
+클래스 : 앞글자 대문자
+변수 : 앞글자 소문자.
+
+sqlite3 만들기. (프로젝트 오른쪽 클릭 --> Django --> migrate) //데이터를 관리하는 파일임.이 공간에 이제 관리자를 만들 수 있음.
+
+cmd 들어가.D:\songsm\workspace\work_0818\src 경로로 진입.
+
+dir 로 현재경로의 파일들 볼 수 있음. 
+
+manage.py에 들어가기 위해 여기까지 온 것임. 여기서 관리자 계정만들거야. (이건 cmd에서만 가능함.)
+
+python manage.py createsuperuser 
+ID : sunny.song
+PW : picture123
+
+이클립스에서 create application클릭 (프로젝트 우클릭 --> Django)
+vote라는 폴더를 생성함.
+
+vote > models.py
+모델은 클래스 단위로 생성! Question이라는 클래스 생성. (상속받자.. 일 덜하기 위해서..)
+
+모델클래스를 다 완성하면, migration을 해서 데이터베이스에 저장해야 함.
+
+1) settings.py에 해당 어플리케이션이 등록되어있어야 실행 가능함.
+vote 등록함.
+2) migration (프로젝트 오른쪽 클릭 --> Django --> make migration), vote입력
+3)0001_initial.py에 데이터 베이스 추가 되어 있음.
+4) migrate 도 클릭! 
+
+여기까지는 관리자 페이지 에서 못봄. admin.py에 등록이  되어야 함.
+
+5) admin.site.register(Question)
+
+6) 이제 view를 만들어 보자. (사용자에게 데이터를 갖다 주는 역할..)
+
+7) templete를 만들자. (웬만하면 application안에 만들자.)
+ vote 오른쪽 클릭 --> new --> 폴더(templates)
+ templates 하위 vote(어플리케이션과 동일 이름)라는 폴더 생성!
+8)html 파일 만들자
+ vote 폴더 하위에 html 만들자. (new -> others -> web -> html)
+
+9)html에서 view의 사전형을 {{}} 형태로 가져올 수 있음.
+10) 프로젝트 하위 urls.py에서 view의 함수를 매칭 시키게 됨.
+그럼 view가 html을 부르는 것임.
+
+##정리##
+어플리케이션 하위 models.py에서 클래스 단위로 기능 생성! 
+settings.py에 어플리케이션등록 해야함. (migration --> migrate)
+admin.py에 클래스 추가하여, 관리자 페이지에서 볼 수 있도록 함.
+
+view에서 함수 추가하여 html 파일경로를 추가하자.
+url에서 연결하고자하는 어플리케이션의 함수를 추가하자.
+(url --> view --> html)
+
+
+{{ }} // 단순히 값 출력
+{% %}는 for문 같은 기능 동작!
+
+
+#연습!
+view에 index 함수를 정의 : Question 클래스의 객체들을 불러올 것임.
+from .models import Question
+
+(class Question --> views --> template --> html로 표현가능해짐.)
+
+templates 수정.
+
+//=====================================
+// 0819
+//=====================================
+url은 리스트 형태이기 때문에, 한개의 주소가 서로다른 함수를 불러올 때, 위에 함수가 불러지게 됨.
+
+//=====================================
+// 0825
+//=====================================
+프로젝트 명과 똑같은 폴더의 파일들에서는 전체적인 셋팅..
+
+장고의 어플리케이션 추가, Django > create application. 
+그 후, Settings.py에 app 추가. 
+[Model 작업]
+1) model에서 클래스 재정리. (Field라는 변수들은 어떤 값을 저장하는 용도.)
+2) make migration > (파일생성됨) > migrate (실제 데이터 베이스에 적용)
+
+[View]
+1) 어떤 HTML을 불러줄지, Model을 어떻게 이용할 지. 
+request : 함수 정의시 반드시 첫번째 매게변수로 사용. (어떤 사용자가 어떤 요청을 했는지, 등 정보가 담겨 있음.)
+이 외에 추가 매개변수가 있다면, URL에서 값을 전달할 수 있게 한다. 
+
+object를 가져올 때, all 하면 전체 다 가져오고, get은 한개만 가져옴. 그런데, 이것보다는 get_object_or_404 가 더 좋음.
+변수를 html로 전달도 가능함. (딕셔터리 형태로)
+리턴으로 html 주소를 줄 수도 있고, 경로를 줄 수도 있음..?
+
+======================================복습
+
+ctrl+space : 넣을수 있는 type 볼 수 있음
+name="question_text" 을 가지고 웹서버에서 다룰 수 있음.
+
+
+모델크렐스의 수정사항을  html에 적용할 때, 이중작업을 하고 싶지 않아서 하는 것이 FORM..?
+
+vote > crete new python module >forms 생성. (input tag를 여러개 만드는게 관리가 안됨)
+==> input 태그를 자동으로 생성 될 수 있도록 만들게 하려는 것임. (다른 파일에 만들어도 상관없지만, 구분짓기 위해 굳이 새로운 파일 생성함)
+
+(model -> form -> view -> templeate(html) -> url)
+render : HTML에 값 전달.
+
+<!-- 	
+	<a href = "{%url 'registerQ' question.id %}">질문등록</a>
+	<a href = "{%url 'registerC' question.id %}">선택지 등록</a>
+ -->
+
+20180421-IT-0260
+
+#updateC제작
+#1) View 제작
+1-1)Chioce 객체 찾기
+1-2)GET/POST 구분
+1-3-1-1)GET-폼객체 생성후 html 반환
+1-3-1-2)POST - 사용자 입력 + Choice 객체를  통해 생성자 호출
+1-3-2-3) 데이터가 유효한지 확인
+폼객체 저장
+사용자에게 detail 뷰의 URL 전송
+
+템플릿 제작
+폼 태그 기반으로 사용자에게 입력양식 제공
+urls 등록
+path 함수를 기반으로 url 등록
+
+
+//=====================================
+// 0826
+//=====================================
+
+model -> form -> view -> templates -> url
+
+회원관리 코드를 활용한, 로그인/로그아웃, 하는 걸 추가하자. (create app)
+1) create app
+2) settings에 app 등록
+3) 인증 및 권한 이라는 장고 app을 활용하자!
+4) form을 만들자.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

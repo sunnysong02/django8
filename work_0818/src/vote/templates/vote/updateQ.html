@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="" method="POST"> 
+		{%csrf_token %}
+		{{form.as_p}}
+		<input type="submit" value="질문수정">		
+	</form>
+</body>
+</html>
